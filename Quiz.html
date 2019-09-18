@@ -29,6 +29,9 @@
             <li class="nav-item">
               <a class="nav-link" id="terceQuest-tab" data-toggle="tab" href="#terceQuest" role="tab" aria-controls="terceQuest" aria-selected="false">3ª Questão</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" id="quartaQuest-tab" data-toggle="tab" href="#quartaQuest" role="tab" aria-controls="quartaQuest" aria-selected="false">4ª Questão</a>
+            </li>
 
 <!------------------------------- Aba final de pontos------------------------------->
             <li class="nav-item">
@@ -43,16 +46,16 @@
     <div class="perguntas tab-pane fade show active" id="primeraQuest" role="tabpanel" aria-labelledby="primeraQuest-tab">
         <div class="list-group pergunta">
             <button type="button" class="list-group-item list-group-item-action active" >
-                1ª) Veja a situação a seguir: ‘’tenho três boletos em atraso, quero pagar a mais antiga que venceu dia 17/07, hoje 25/10 pode me mandar? ‘’. O que você faria nesta situação? (2 pontos)
+               <b> 1ª)</b> Veja a situação a seguir: ‘’tenho três boletos em atraso, quero pagar a mais antiga que venceu dia 17/07, hoje 25/10 pode me mandar? ‘’. O que você faria nesta situação? <b>(2 pontos)</b> 
             </button>
             <button type="button" id="btnCorreto" class="list-group-item list-group-item-action" onclick="correta('btnCorreto', 'btnErradoB', 'btnErradoC', 'explicQ1','btnAjudaQ1', 2)">
-                A. Tentaria atualizar o boleto, dando erro abriria um chamado para o financeiro.
+                <b> A.</b> Tentaria atualizar o boleto, dando erro abriria um chamado para o financeiro.
             </button>
             <button type="button" id="btnErradoB" class="list-group-item list-group-item-action" onclick="errada('btnErradoB', 'btnCorreto','btnErradoC', 'explicQ1','btnAjudaQ1')">
-                B. Tem mais de 70 dias em atraso, passaria o contato da .   
+               <b> B.</b> Tem mais de 70 dias em atraso, passaria o contato da Norton Nunes.   
             </button>
             <button type="button" id="btnErradoC" class="list-group-item list-group-item-action" onclick="errada('btnErradoC', 'btnErradoB', 'btnCorreto', 'explicQ1','btnAjudaQ1')">
-                C. Faria direto uma solicitação ao financeiro para que enviasse o boleto. 
+               <b> C.</b> Faria direto uma solicitação ao financeiro para que enviasse o boleto. 
             </button>
     
         </div>   
@@ -65,10 +68,10 @@
             </div>
         </div>
 
-<!-------------------------------Botões de Ajuda------------------------------->
+<!-------------------------------Botões de Ajuda  questão 1------------------------------->
         <div class="ajudas">
             <div class="list-group ">
-                <button type="button" id="btnAjudaQ1" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ1')">Chamar Veterano</button>
+                <button type="button" id="btnAjudaQ1" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ1')">Chamar Veterano (-1 ponto)</button>
             </div>
         </div>    
     </div>       
@@ -77,16 +80,16 @@
     <div class="perguntas tab-pane fade show" id="segundaQuest" role="tabpanel" aria-labelledby="segundaQuest-tab">
         <div class="list-group pergunta" >
                 <button type="button" class="list-group-item list-group-item-action active">
-                    2ª) Beneficiário entrou em contato questionando que seu boleto veio com aumento. (2 pontos)
+                   <b> 2ª)</b> Beneficiário entrou em contato questionando que seu boleto veio com aumento. <b> (2 pontos)</b>
                 </button>
                 <button type="button" id="btnCorreto2q" class="list-group-item list-group-item-action" onclick="correta('btnCorreto2q','btnErradoB2q','btnErradoC2q', 'explicQ2', 'btnAjudaQ2',2)">
-                    A. Verificar se estamos no mês de reajuste e a data do contrato.
+                    <b> A.</b> Verificar se estamos no mês de reajuste e a data do contrato.
                 </button>
                 <button type="button" id="btnErradoB2q" class="list-group-item list-group-item-action" onclick="errada('btnErradoB2q', 'btnCorreto2q', 'btnErradoC2q', 'explicQ2', 'btnAjudaQ2')">
-                    B. Verificar se é plano empresarial ou pessoa física e identificar a cobrança.
+                   <b> B.</b> Verificar se é plano empresarial ou pessoa física e identificar a cobrança.
                 </button>
                 <button type="button" id="btnErradoC2q" class="list-group-item list-group-item-action" onclick="errada('btnErradoC2q', 'btnErradoB2q', 'btnCorreto2q', 'explicQ2', 'btnAjudaQ2')">
-                    C. Verificar a data de contrato do plano, e/ou a data de aniversário do titular e dos dependentes.
+                   <b> C.</b> Verificar a data de contrato do plano, e/ou a data de aniversário do titular e dos dependentes.
                 </button>
         
         </div>       
@@ -100,10 +103,10 @@
         </div>
     </div>
         
-    <!------------------------------- Botão de Ajuda------------------------------->
+    <!------------------------------- Botão de Ajuda  questão 2------------------------------->
         <div class="ajudas">
             <div class="list-group ">
-                <button type="button" id="btnAjudaQ2" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ2')">Chamar Veterano</button>
+                <button type="button" id="btnAjudaQ2" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ2')">Chamar Veterano (-1 ponto)</button>
             </div>
         </div>    
 
@@ -113,16 +116,16 @@
     <div class="perguntas tab-pane fade show" id="terceQuest" role="tabpanel" aria-labelledby="terceQuest-tab">
         <div class="list-group pergunta">
                 <button type="button" class="list-group-item list-group-item-action active" >
-                    3ª)	O beneficiário liga solicitando a segunda via, o que você dever fazer?  (1 ponto)
+                    <b> 3ª)</b>	O beneficiário liga solicitando a segunda via, o que você dever fazer? <b> (1 ponto)</b>
                 </button>
                 <button type="button" id="btnCorreto3q" class="list-group-item list-group-item-action" onclick="correta('btnCorreto3q', 'btnErradoB3q','btnErradoC3q', 'explicQ3', 'btnAjudaQ3', 1)">
-                    A. Confirmo os dados, endereço de e-mail e faço o envio.
+                    <b> A.</b> Confirmo os dados, endereço de e-mail e faço o envio.
                 </button>
                 <button type="button" id="btnErradoB3q" class="list-group-item list-group-item-action" onclick="errada('btnErradoB3q', 'btnCorreto3q','btnErradoC3q', 'explicQ3', 'btnAjudaQ3')">
-                    B. Confirmo os dados e informo que está disponível no site.     
+                   <b> B.</b> Confirmo os dados e informo que está disponível no site.     
                 </button>
                 <button type="button" id="btnErradoC3q" class="list-group-item list-group-item-action" onclick="errada('btnErradoC3q', 'btnCorreto3q','btnErradoB3q', 'explicQ3', 'btnAjudaQ3')">
-                    C. Confirmo a carteirinha e informo que vou enviar o boleto.
+                   <b> C.</b> Confirmo a carteirinha e informo que vou enviar o boleto.
                 </button>
         
         </div>  
@@ -136,13 +139,52 @@
         </div>
     </div>
 
-    <!------------------------------- Botões de Ajuda------------------------------->
+    <!------------------------------- Botões de Ajuda questão 3------------------------------->
         <div class="ajudas">
             <div class="list-group ">
-                <button type="button" id="btnAjudaQ3" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ3')">Chamar Veterano</button>
+                <button type="button" id="btnAjudaQ3" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ3')">Chamar Veterano (-1 ponto)</button>
             </div>
         </div>    
     </div>
+
+<!------------------------------- Pergunta numero 4------------------------------->  
+<div class="perguntas tab-pane fade show" id="quartaQuest" role="tabpanel" aria-labelledby="quartaQuest-tab">
+    <div class="list-group pergunta">
+            <button type="button" class="list-group-item list-group-item-action active" >
+                <b> 4ª)</b>	Tenho um plano empresarial, e preciso do boleto junto com o relatório de funcionários. <b> (3 pontos)</b>
+            </button>
+            <button type="button" id="btnCorreto4q" class="list-group-item list-group-item-action" onclick="correta('btnCorreto4q', 'btnErradoB4q','btnErradoC4q', 'explicQ4', 'btnAjudaQ4', 3)">
+                <b> A.</b> Ambos estão disponíveis no site, na aba segunda via: basta colocar o login EMPRESA+CÓD senha 123
+            </button>
+            <button type="button" id="btnErradoB4q" class="list-group-item list-group-item-action" onclick="errada('btnErradoB4q', 'btnCorreto4q','btnErradoC4q', 'explicQ4', 'btnAjudaQ4')">
+               <b> B.</b> Ambos estão disponíveis no site, na aba portal empresarial: basta colocar o login EMPRESA+CÓD senha 123
+            </button>
+            <button type="button" id="btnErradoC4q" class="list-group-item list-group-item-action" onclick="errada('btnErradoC4q', 'btnCorreto4q','btnErradoB4q', 'explicQ4', 'btnAjudaQ4')">
+               <b> C.</b> Apenas o boleto está disponível no site: basta colocar o login EMPRESA+CÓD senha 123. Abro um XCRM para enviar o relatório.
+            </button>
+    
+    </div>  
+    
+<!-------------------------------Explicação questão 4------------------------------->
+
+<div class="explain dpnone" id="explicQ4">
+    <div class="font-weight-bold">
+        <h3 class=" text-primary ">Resposta Correta:</h3>
+        B –  O portal empresarial possui diversos relatórios para as empresas, além da segunda via de boleto.
+    </div>
+</div>
+
+<!------------------------------- Botões de Ajuda questão 4------------------------------->
+    <div class="ajudas">
+        <div class="list-group ">
+            <button type="button" id="btnAjudaQ4" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ4')">Chamar Veterano (-1 ponto)</button>
+        </div>
+    </div>    
+</div>
+
+
+
+
 
 
 <!------------------------------- Conteudo Aba final de pontos------------------------------->
@@ -223,21 +265,13 @@
         questoes += 1;
     }
 
-    function retiraPontos(btnAjuda){
-        var butn = document.getElementById(btnAjuda);        
-        butn.disabled = true;
-        
+    function retiraPontos(btnAjuda){        
         pontos -= 1;
         ajuda += 1;      
 
     }
-    //pontuação funcionando
-    function totalPontos(){
-        alert("Pontos: " + pontos + "\nQuestões: " + questoes);
-        
-    }
     
-//Função verifica e exibe a informação dependendo se respondeu todas as perguntas ou não.  
+    //Função verifica e exibe a informação dependendo se respondeu todas as perguntas ou não.  
     function resultado() {
           
         document.getElementById("pergCorretas").innerHTML = certas;
