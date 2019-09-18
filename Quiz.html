@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Cobrança</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/myStyle.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-light bg-primary font-weight-bold">
+        <a class="navbar-brand " href="#">
+            <img src="images/quiz.svg" width="60" height="60" class="d-inline-block align-top" alt="">
+            <span class="font-lg"> Quem Sabe Mais?</span>
+        </a>
+       
+    </nav>
+
+<!-------------------------------Abas do menu------------------------------->  
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="primeraQuest-tab" data-toggle="tab" href="#primeraQuest" role="tab" aria-controls="home" aria-selected="true">1ª Questão</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="segundaQuest-tab" data-toggle="tab" href="#segundaQuest" role="tab" aria-controls="segundaQuest" aria-selected="false">2ª Questão</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="terceQuest-tab" data-toggle="tab" href="#terceQuest" role="tab" aria-controls="terceQuest" aria-selected="false">3ª Questão</a>
+            </li>
+
+<!------------------------------- Aba final de pontos------------------------------->
+            <li class="nav-item">
+              <a class="nav-link" id="resultado-tab" data-toggle="tab" href="#resultado" role="tab" aria-controls="resultado" aria-selected="false" onclick="resultado()" >Resultado</a>
+            </li>
+    </ul>
+    
+<!-------------------------------Tab dos conteudos------------------------------->    
+<div class="tab-content" id="myTabContent">
+
+<!-------------------------------Pergunta numero 1------------------------------->  
+    <div class="perguntas tab-pane fade show active" id="primeraQuest" role="tabpanel" aria-labelledby="primeraQuest-tab">
+        <div class="list-group pergunta">
+            <button type="button" class="list-group-item list-group-item-action active" >
+                1ª) Veja a situação a seguir: ‘’tenho três boletos em atraso, quero pagar a mais antiga que venceu dia 17/07, hoje 25/10 pode me mandar? ‘’. O que você faria nesta situação? (2 pontos)
+            </button>
+            <button type="button" id="btnCorreto" class="list-group-item list-group-item-action" onclick="correta('btnCorreto', 'btnErradoB', 'btnErradoC', 'explicQ1','btnAjudaQ1', 2)">
+                A. Tentaria atualizar o boleto, dando erro abriria um chamado para o financeiro.
+            </button>
+            <button type="button" id="btnErradoB" class="list-group-item list-group-item-action" onclick="errada('btnErradoB', 'btnCorreto','btnErradoC', 'explicQ1','btnAjudaQ1')">
+                B. Tem mais de 70 dias em atraso, passaria o contato da .   
+            </button>
+            <button type="button" id="btnErradoC" class="list-group-item list-group-item-action" onclick="errada('btnErradoC', 'btnErradoB', 'btnCorreto', 'explicQ1','btnAjudaQ1')">
+                C. Faria direto uma solicitação ao financeiro para que enviasse o boleto. 
+            </button>
+    
+        </div>   
+        
+<!-------------------------------Explicação questão 1------------------------------->
+        <div class="explain dpnone" id="explicQ1">
+            <div class="font-weight-bold">
+                <h3 class=" text-primary ">Resposta Correta:</h3>
+                B- O vencimento foi em 17/07, se formos contar são 3 meses que dão mais de 90 dias em atraso, o contato de boletos com mais de 70 dias é com a Norton.
+            </div>
+        </div>
+
+<!-------------------------------Botões de Ajuda------------------------------->
+        <div class="ajudas">
+            <div class="list-group ">
+                <button type="button" id="btnAjudaQ1" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ1')">Chamar Veterano</button>
+            </div>
+        </div>    
+    </div>       
+    
+<!-------------------------------Pergunta numero 2------------------------------->  
+    <div class="perguntas tab-pane fade show" id="segundaQuest" role="tabpanel" aria-labelledby="segundaQuest-tab">
+        <div class="list-group pergunta" >
+                <button type="button" class="list-group-item list-group-item-action active">
+                    2ª) Beneficiário entrou em contato questionando que seu boleto veio com aumento. (2 pontos)
+                </button>
+                <button type="button" id="btnCorreto2q" class="list-group-item list-group-item-action" onclick="correta('btnCorreto2q','btnErradoB2q','btnErradoC2q', 'explicQ2', 'btnAjudaQ2',2)">
+                    A. Verificar se estamos no mês de reajuste e a data do contrato.
+                </button>
+                <button type="button" id="btnErradoB2q" class="list-group-item list-group-item-action" onclick="errada('btnErradoB2q', 'btnCorreto2q', 'btnErradoC2q', 'explicQ2', 'btnAjudaQ2')">
+                    B. Verificar se é plano empresarial ou pessoa física e identificar a cobrança.
+                </button>
+                <button type="button" id="btnErradoC2q" class="list-group-item list-group-item-action" onclick="errada('btnErradoC2q', 'btnErradoB2q', 'btnCorreto2q', 'explicQ2', 'btnAjudaQ2')">
+                    C. Verificar a data de contrato do plano, e/ou a data de aniversário do titular e dos dependentes.
+                </button>
+        
+        </div>       
+        
+    <!-------------------------------Explicação questão 2------------------------------->
+
+    <div class="explain dpnone" id="explicQ2">
+        <div class="font-weight-bold">
+            <h3 class=" text-primary ">Resposta Correta:</h3>
+            C – Devemos verificar a data de contrato pois pode ser o reajuste anual, não sendo devemos verificar se algum beneficiário mudou a faixa etária. Não sendo nenhuma das opções abrir o XCRM.
+        </div>
+    </div>
+        
+    <!------------------------------- Botão de Ajuda------------------------------->
+        <div class="ajudas">
+            <div class="list-group ">
+                <button type="button" id="btnAjudaQ2" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ2')">Chamar Veterano</button>
+            </div>
+        </div>    
+
+    </div>
+
+<!------------------------------- Pergunta numero 3------------------------------->  
+    <div class="perguntas tab-pane fade show" id="terceQuest" role="tabpanel" aria-labelledby="terceQuest-tab">
+        <div class="list-group pergunta">
+                <button type="button" class="list-group-item list-group-item-action active" >
+                    3ª)	O beneficiário liga solicitando a segunda via, o que você dever fazer?  (1 ponto)
+                </button>
+                <button type="button" id="btnCorreto3q" class="list-group-item list-group-item-action" onclick="correta('btnCorreto3q', 'btnErradoB3q','btnErradoC3q', 'explicQ3', 'btnAjudaQ3', 1)">
+                    A. Confirmo os dados, endereço de e-mail e faço o envio.
+                </button>
+                <button type="button" id="btnErradoB3q" class="list-group-item list-group-item-action" onclick="errada('btnErradoB3q', 'btnCorreto3q','btnErradoC3q', 'explicQ3', 'btnAjudaQ3')">
+                    B. Confirmo os dados e informo que está disponível no site.     
+                </button>
+                <button type="button" id="btnErradoC3q" class="list-group-item list-group-item-action" onclick="errada('btnErradoC3q', 'btnCorreto3q','btnErradoB3q', 'explicQ3', 'btnAjudaQ3')">
+                    C. Confirmo a carteirinha e informo que vou enviar o boleto.
+                </button>
+        
+        </div>  
+        
+    <!-------------------------------Explicação questão 3------------------------------->
+
+    <div class="explain dpnone" id="explicQ3">
+        <div class="font-weight-bold">
+            <h3 class=" text-primary ">Resposta Correta:</h3>
+            B – Os dados devem ser sempre confirmados e é importante que o beneficiário tenha o costume de acessar o site quando precisar da segunda via, forçando a pegar no site diminui as ligações referente a segunda via de boleto.
+        </div>
+    </div>
+
+    <!------------------------------- Botões de Ajuda------------------------------->
+        <div class="ajudas">
+            <div class="list-group ">
+                <button type="button" id="btnAjudaQ3" class="list-group-item bg-danger text-light" onclick="retiraPontos('btnAjudaQ3')">Chamar Veterano</button>
+            </div>
+        </div>    
+    </div>
+
+
+<!------------------------------- Conteudo Aba final de pontos------------------------------->
+
+    <div class="perguntas tab-pane fade show" id="resultado" role="tabpanel" aria-labelledby="resultado-tab">
+
+        <div class="dpnone" id="respondidas">
+            <ul class="list-group">
+                <li class="list-group-item active"> <h3>Resultado</h3></li>
+                <li class="list-group-item">Você acertou <span class="text-success font-weight-bold" id="pergCorretas"></span> pergunta(s),
+                    errou <span class="text-danger font-weight-bold" id="pergErradas"></span>
+                    e pediu <span class="text-warning font-weight-bold" id="pedidoAjuda"></span> ajuda(s).</li>
+                <li class="list-group-item">Fez um total de <span class="font-weight-bold text-primary active" id="tPontos" ></span> pontos.</li>
+            </ul>
+        </div>
+        <div class="dpnone" id="nRespondidas">
+            <h3>Você não respondeu todas as perguntas, por favor volte e verifque qual faltou para descobrir o resultado.</h3>
+        </div>
+    </div>
+</div>
+
+
+
+<!------------------------------- Scripts ------------------------------->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+
+     
+
+    var pontos = 0;
+    var questoes = 0;
+    var certas = 0;
+    var erradas = 0;
+    var ajuda = 0;
+
+    function correta(idClicado, btnB, btnC, explica, btnAjuda, pts) {
+        var element = document.getElementById(idClicado);
+        var butnB = document.getElementById(btnB);
+        var butnC = document.getElementById(btnC);
+        var expla = document.getElementById(explica);
+        var butn = document.getElementById(btnAjuda);        
+
+        
+        element.classList.add("bg-success");
+        element.classList.add("text-light");
+        expla.classList.remove("dpnone");
+           
+        butn.disabled = true;
+        element.disabled = true;
+        butnB.disabled = true;
+        butnC.disabled = true;
+
+        pontos += pts;
+        questoes += 1;
+        certas += 1;
+    }
+
+    function errada(idClicado, btnB, btnC, explica, btnAjuda) {
+        var element = document.getElementById(idClicado);
+        var butnB = document.getElementById(btnB);
+        var butnC = document.getElementById(btnC);
+        var expla = document.getElementById(explica);
+        var butn = document.getElementById(btnAjuda);        
+        
+
+        element.classList.add("bg-danger");
+        element.classList.add("text-light");
+        expla.classList.remove("dpnone");
+
+        element.disabled = true;
+        butn.disabled = true;
+        butnB.disabled = true;
+        butnC.disabled = true;
+        
+        erradas += 1;
+        questoes += 1;
+    }
+
+    function retiraPontos(btnAjuda){
+        var butn = document.getElementById(btnAjuda);        
+        butn.disabled = true;
+        
+        pontos -= 1;
+        ajuda += 1;      
+
+    }
+    //pontuação funcionando
+    function totalPontos(){
+        alert("Pontos: " + pontos + "\nQuestões: " + questoes);
+        
+    }
+    
+//Função verifica e exibe a informação dependendo se respondeu todas as perguntas ou não.  
+    function resultado() {
+          
+        document.getElementById("pergCorretas").innerHTML = certas;
+        document.getElementById("pergErradas").innerHTML = erradas;
+        document.getElementById("pedidoAjuda").innerHTML = ajuda;
+        document.getElementById("tPontos").innerHTML = pontos;
+
+
+        if(questoes < 3){
+            var divExibir = document.getElementById("nRespondidas");
+            var divResp = document.getElementById("respondidas");
+            
+            divExibir.classList.remove("dpnone");
+            divResp.classList.add("dpnone");
+
+            
+        }else{
+            var divExibir = document.getElementById("respondidas");
+            var divNResp = document.getElementById("nRespondidas");
+
+            divExibir.classList.remove("dpnone");
+            divNResp.classList.add("dpnone");
+        }
+    }
+
+    
+
+    </script>  
+</body>
+</html>
